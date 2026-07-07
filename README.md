@@ -6,4 +6,4 @@ Public GitHub Pages audio CDN for app testing.
 - Player/index: https://bobhasaclaw.github.io/workout-forge-music-cdn/
 - First track: https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/01-break-the-floor.mp3
 
-MP3s are 96 kbps test encodes for quick app/CDN testing.
+MP3s are 32 kbps mono test encodes for quick app/CDN testing. Source masters are local.
