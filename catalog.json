@@ -7,7 +7,7 @@
   "format": "mp3",
   "bitrate": "96k test encode",
   "base_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/",
-  "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/artwork/cover.png",
+  "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/artwork/cover.jpg",
   "tracks": [
     {
       "id": "workout-forge-01",
