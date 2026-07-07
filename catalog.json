@@ -1,0 +1,333 @@
+{
+  "version": "1.0",
+  "name": "Workout Forge - 20-Track Hard Rock Metal Test",
+  "description": "Public GitHub Pages music CDN manifest for app testing. MP3 files are 96 kbps test encodes; source masters kept locally.",
+  "artist": "Workout Forge",
+  "track_count": 20,
+  "format": "mp3",
+  "bitrate": "96k test encode",
+  "base_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/",
+  "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/artwork/cover.png",
+  "tracks": [
+    {
+      "id": "workout-forge-01",
+      "track": 1,
+      "title": "Break the Floor",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 200,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/01-break-the-floor.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-02",
+      "track": 2,
+      "title": "Iron Pulse",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 247,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/02-iron-pulse.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-03",
+      "track": 3,
+      "title": "No Mercy Mode",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 221,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/03-no-mercy-mode.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-04",
+      "track": 4,
+      "title": "Furnace Lungs",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 200,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/04-furnace-lungs.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-05",
+      "track": 5,
+      "title": "Barbell Thunder",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 168,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/05-barbell-thunder.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-06",
+      "track": 6,
+      "title": "Blood Hot Signal",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 217,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/06-blood-hot-signal.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-07",
+      "track": 7,
+      "title": "Set Fire to the Timer",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 204,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/07-set-fire-to-the-timer.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-08",
+      "track": 8,
+      "title": "Gravel in the Veins",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 203,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/08-gravel-in-the-veins.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-09",
+      "track": 9,
+      "title": "Teeth on the Chain",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 197,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/09-teeth-on-the-chain.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-10",
+      "track": 10,
+      "title": "Last Rep Riot",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 219,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/10-last-rep-riot.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-11",
+      "track": 11,
+      "title": "Caged Animal Cardio",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 200,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/11-caged-animal-cardio.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-12",
+      "track": 12,
+      "title": "Hammer the Doubt",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 191,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/12-hammer-the-doubt.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-13",
+      "track": 13,
+      "title": "Metal in the Mirror",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 229,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/13-metal-in-the-mirror.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-14",
+      "track": 14,
+      "title": "Sweat Like Voltage",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 209,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/14-sweat-like-voltage.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-15",
+      "track": 15,
+      "title": "Deadlift Sunrise",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 214,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/15-deadlift-sunrise.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-16",
+      "track": 16,
+      "title": "Push Until It Moves",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 207,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/16-push-until-it-moves.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-17",
+      "track": 17,
+      "title": "The Beast Counts Down",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 191,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/17-the-beast-counts-down.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-18",
+      "track": 18,
+      "title": "Concrete Halo",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 216,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/18-concrete-halo.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-19",
+      "track": 19,
+      "title": "Rage With a Steering Wheel",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 210,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/19-rage-with-a-steering-wheel.mp3",
+      "license": "owned/generated test music"
+    },
+    {
+      "id": "workout-forge-20",
+      "track": 20,
+      "title": "Empty the Tank",
+      "artist": "Workout Forge",
+      "album": "20-Track Hard Rock Metal Test",
+      "genre": "hard rock / metal workout",
+      "mood": [
+        "workout",
+        "high-energy",
+        "heavy"
+      ],
+      "duration_seconds": 173,
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/20-empty-the-tank.mp3",
+      "license": "owned/generated test music"
+    }
+  ]
+}
