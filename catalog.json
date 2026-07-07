@@ -1,11 +1,11 @@
 {
   "version": "1.0",
   "name": "Workout Forge - 20-Track Hard Rock Metal Test",
-  "description": "Public GitHub Pages music CDN manifest for app testing. MP3 files are lightweight 16 kbps mono test encodes; source masters kept locally.",
+  "description": "Public GitHub Pages music CDN manifest for app testing. MP3 files are ultra-light 8 kbps mono test encodes due GitHub upload limits; source masters kept locally.",
   "artist": "Workout Forge",
   "track_count": 20,
   "format": "mp3",
-  "bitrate": "16k mono test encode",
+  "bitrate": "8k mono test encode",
   "base_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/",
   "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/artwork/cover.jpg",
   "tracks": [
