@@ -1,0 +1,100 @@
+name: Upload release assets from chunk URL
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: GitHub Release tag to create/update
+        required: true
+      base_url:
+        description: Base URL serving chunk-manifest.json and chunk files
+        required: true
+      title:
+        description: Release title
+        required: false
+        default: Workout Forge 20-Track 320kbps v1
+
+permissions:
+  contents: write
+
+jobs:
+  upload-assets-from-chunk-url:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Install tools
+        run: |
+          sudo apt-get update >/dev/null
+          sudo apt-get install -y jq >/dev/null
+
+      - name: Download chunks, reassemble, and verify MP3s
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets chunks
+          base="${{ inputs.base_url }}"
+          base="${base%/}"
+          echo "Base URL: $base"
+          curl -fsSL --retry 8 --retry-all-errors --retry-delay 3 --connect-timeout 30 --max-time 120 \
+            "$base/chunk-manifest.json" -o chunk-manifest.json
+          count=$(jq '.assets | length' chunk-manifest.json)
+          chunks=$(jq '[.assets[].parts | length] | add' chunk-manifest.json)
+          echo "Manifest assets: $count"
+          echo "Manifest chunks: $chunks"
+          test "$count" -eq 20
+
+          python3 - <<'PY2'
+          import json, pathlib, subprocess, sys, hashlib
+          m=json.load(open('chunk-manifest.json'))
+          base='${{ inputs.base_url }}'.rstrip('/')
+          for asset in m['assets']:
+              out=pathlib.Path('assets')/asset['name']
+              print(f"Reassembling {asset['name']} from {len(asset['parts'])} chunks", flush=True)
+              with out.open('wb') as w:
+                  for part in asset['parts']:
+                      rel=part['name']
+                      dst=pathlib.Path('chunks')/rel
+                      dst.parent.mkdir(parents=True, exist_ok=True)
+                      url=f"{base}/{rel}"
+                      cmd=['curl','-fsSL','--retry','10','--retry-all-errors','--retry-delay','2','--connect-timeout','30','--max-time','180',url,'-o',str(dst)]
+                      subprocess.run(cmd, check=True)
+                      data=dst.read_bytes()
+                      got=hashlib.sha256(data).hexdigest()
+                      if len(data)!=part['size'] or got!=part['sha256']:
+                          raise SystemExit(f"Bad chunk {rel}: size {len(data)} sha {got}")
+                      w.write(data)
+              data=out.read_bytes()
+              got=hashlib.sha256(data).hexdigest()
+              print(f"{asset['name']} size={len(data)} sha256={got}", flush=True)
+              if len(data)!=asset['size'] or got!=asset['sha256']:
+                  raise SystemExit(f"Bad asset {asset['name']}: size {len(data)} sha {got}")
+          PY2
+
+      - name: Create release if missing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "${{ inputs.tag }}" >/dev/null 2>&1; then
+            echo "Release exists: ${{ inputs.tag }}"
+          else
+            gh release create "${{ inputs.tag }}" \
+              --title "${{ inputs.title }}" \
+              --notes "High-quality MP3 320kbps release assets for Workout Forge."
+          fi
+
+      - name: Upload MP3 release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "${{ inputs.tag }}" assets/*.mp3 --clobber
+
+      - name: List uploaded assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release view "${{ inputs.tag }}" --json url,assets --jq '{url:.url, mp3_count:([.assets[] | select(.name|endswith(".mp3"))] | length), assets:[.assets[] | {name,size,state}]}'
