@@ -16,7 +16,7 @@ on:
       zip_path:
         description: Optional zip bundle path
         required: false
-        default: release-assets/workout-forge-20-track-320kbps.zip
+        default: ""
       title:
         description: Release title
         required: false
@@ -33,6 +33,22 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ inputs.asset_ref }}
+
+      - name: Reassemble chunked assets if present
+        shell: bash
+        run: |
+          set -euo pipefail
+          chunk_root="${{ inputs.asset_dir }}.chunks"
+          if [ -d "$chunk_root" ]; then
+            echo "Reassembling chunked assets from $chunk_root"
+            mkdir -p "${{ inputs.asset_dir }}"
+            for file_dir in "$chunk_root"/*.mp3; do
+              [ -d "$file_dir" ] || continue
+              out="${{ inputs.asset_dir }}/$(basename "$file_dir")"
+              cat "$file_dir"/part-* > "$out"
+              echo "assembled $out ($(wc -c < "$out") bytes)"
+            done
+          fi
 
       - name: Verify assets
         shell: bash
