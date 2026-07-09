@@ -1,0 +1,89 @@
+name: Upload release assets from URL
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: GitHub Release tag to create/update
+        required: true
+      base_url:
+        description: Base URL serving manifest.json and MP3 files
+        required: true
+      title:
+        description: Release title
+        required: false
+        default: Workout Forge 20-Track 320kbps v1
+
+permissions:
+  contents: write
+
+jobs:
+  upload-assets-from-url:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install tools
+        run: |
+          sudo apt-get update >/dev/null
+          sudo apt-get install -y jq >/dev/null
+
+      - name: Download and verify MP3s
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          base="${{ inputs.base_url }}"
+          base="${base%/}"
+          echo "Base URL: $base"
+          curl -fsSL --retry 5 --retry-all-errors "$base/manifest.json" -o manifest.json
+          count=$(jq '.assets | length' manifest.json)
+          echo "Manifest count: $count"
+          test "$count" -eq 20
+          jq -r '.assets[].name' manifest.json | while IFS= read -r name; do
+            echo "Downloading $name"
+            curl -fL --retry 8 --retry-all-errors --retry-delay 5 --connect-timeout 30 --max-time 900 \
+              "$base/$name" -o "assets/$name"
+          done
+          python3 - <<'PY2'
+          import hashlib, json, pathlib, sys
+          m=json.load(open('manifest.json'))
+          bad=[]
+          for a in m['assets']:
+              p=pathlib.Path('assets')/a['name']
+              size=p.stat().st_size
+              sha=hashlib.sha256(p.read_bytes()).hexdigest()
+              print(f"{a['name']} size={size} sha256={sha}")
+              if size != a['size'] or sha != a['sha256']:
+                  bad.append((a['name'], size, sha, a['size'], a['sha256']))
+          if bad:
+              print('Verification failures:', bad, file=sys.stderr)
+              sys.exit(1)
+          PY2
+
+      - name: Create release if missing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "${{ inputs.tag }}" >/dev/null 2>&1; then
+            echo "Release exists: ${{ inputs.tag }}"
+          else
+            gh release create "${{ inputs.tag }}" \
+              --title "${{ inputs.title }}" \
+              --notes "High-quality MP3 320kbps release assets for Workout Forge."
+          fi
+
+      - name: Upload MP3 release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "${{ inputs.tag }}" assets/*.mp3 --clobber
+
+      - name: List uploaded assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release view "${{ inputs.tag }}" --json url,assets --jq '{url:.url, mp3_count:([.assets[] | select(.name|endswith(".mp3"))] | length), assets:[.assets[] | {name,size,state}]}'
