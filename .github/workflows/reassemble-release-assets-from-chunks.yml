@@ -1,0 +1,98 @@
+name: Reassemble release assets from chunk release
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_tag:
+        description: Release tag containing wfchunk-manifest.json and wfchunk__* assets
+        required: true
+        default: workout-forge-320-v1-chunks
+      target_tag:
+        description: Target release tag to receive rebuilt MP3 assets
+        required: true
+        default: workout-forge-320-v1
+
+permissions:
+  contents: write
+
+jobs:
+  reassemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Download chunk manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SOURCE_TAG: ${{ inputs.source_tag }}
+        run: |
+          set -euo pipefail
+          mkdir -p chunks out
+          gh release download "$SOURCE_TAG" --repo "$REPO" --pattern 'wfchunk-manifest.json' --dir chunks --clobber
+          jq '.count, ([.assets[].parts | length] | add)' chunks/wfchunk-manifest.json
+
+      - name: Download chunk assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SOURCE_TAG: ${{ inputs.source_tag }}
+        run: |
+          set -euo pipefail
+          cd chunks
+          jq -r '.assets[].parts[]' wfchunk-manifest.json > /tmp/chunk-list.txt
+          total=$(wc -l < /tmp/chunk-list.txt)
+          echo "Downloading $total chunks from $SOURCE_TAG"
+          # gh release download accepts one pattern per call; keep it simple and resilient.
+          i=0
+          while IFS= read -r name; do
+            i=$((i+1))
+            if [ -f "$name" ]; then continue; fi
+            for attempt in 1 2 3 4 5; do
+              if gh release download "$SOURCE_TAG" --repo "$REPO" --pattern "$name" --dir . --clobber; then
+                break
+              fi
+              sleep $((attempt * 3))
+              if [ "$attempt" = 5 ]; then
+                echo "Failed to download $name" >&2
+                exit 1
+              fi
+            done
+            if [ $((i % 50)) -eq 0 ]; then echo "downloaded $i / $total"; fi
+          done < /tmp/chunk-list.txt
+
+      - name: Reassemble and verify MP3s
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path('chunks')
+          out=Path('out'); out.mkdir(exist_ok=True)
+          m=json.loads((root/'wfchunk-manifest.json').read_text())
+          for asset in m['assets']:
+              data=bytearray()
+              for part in asset['parts']:
+                  p=root/part
+                  if not p.exists():
+                      raise SystemExit(f'missing chunk {part}')
+                  data.extend(p.read_bytes())
+              digest=hashlib.sha256(data).hexdigest()
+              if digest != asset['sha256']:
+                  raise SystemExit(f'sha mismatch {asset["name"]}: {digest} != {asset["sha256"]}')
+              if len(data) != asset['size']:
+                  raise SystemExit(f'size mismatch {asset["name"]}: {len(data)} != {asset["size"]}')
+              (out/asset['name']).write_bytes(data)
+              print(f'OK {asset["name"]} {len(data)} {digest}')
+          PY
+
+      - name: Upload rebuilt MP3 assets to target release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          TARGET_TAG: ${{ inputs.target_tag }}
+        run: |
+          set -euo pipefail
+          gh release upload "$TARGET_TAG" out/*.mp3 --repo "$REPO" --clobber
+          gh release view "$TARGET_TAG" --repo "$REPO" --json assets,url | jq '{url, asset_count:(.assets|length), mp3s:[.assets[].name | select(endswith(".mp3"))]}'
