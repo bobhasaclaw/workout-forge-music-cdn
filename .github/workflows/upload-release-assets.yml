@@ -1,0 +1,79 @@
+name: Upload release assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: GitHub Release tag to create/update
+        required: true
+      asset_ref:
+        description: Git ref/branch containing release-assets
+        required: true
+      asset_dir:
+        description: Directory containing MP3 files
+        required: true
+        default: release-assets/workout-forge-320-v1
+      zip_path:
+        description: Optional zip bundle path
+        required: false
+        default: release-assets/workout-forge-20-track-320kbps.zip
+      title:
+        description: Release title
+        required: false
+        default: Workout Forge 20-Track 320kbps v1
+
+permissions:
+  contents: write
+
+jobs:
+  upload-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out asset branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.asset_ref }}
+
+      - name: Verify assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d "${{ inputs.asset_dir }}"
+          count=$(find "${{ inputs.asset_dir }}" -maxdepth 1 -type f -name '*.mp3' | wc -l)
+          echo "MP3 count: $count"
+          test "$count" -eq 20
+          if [ -n "${{ inputs.zip_path }}" ]; then
+            test -f "${{ inputs.zip_path }}"
+          fi
+
+      - name: Create release if missing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "${{ inputs.tag }}" >/dev/null 2>&1; then
+            echo "Release exists: ${{ inputs.tag }}"
+          else
+            gh release create "${{ inputs.tag }}" \
+              --title "${{ inputs.title }}" \
+              --notes "High-quality MP3 320kbps release assets for Workout Forge."
+          fi
+
+      - name: Upload MP3 release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "${{ inputs.tag }}" "${{ inputs.asset_dir }}"/*.mp3 --clobber
+          if [ -n "${{ inputs.zip_path }}" ] && [ -f "${{ inputs.zip_path }}" ]; then
+            gh release upload "${{ inputs.tag }}" "${{ inputs.zip_path }}" --clobber
+          fi
+
+      - name: List uploaded assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release view "${{ inputs.tag }}" --json url,assets --jq '{url:.url, asset_count:(.assets|length), assets:[.assets[].name]}'

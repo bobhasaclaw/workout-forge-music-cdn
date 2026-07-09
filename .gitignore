@@ -1,0 +1,3 @@
+# Local build/release staging files
+release-assets/
+.DS_Store
