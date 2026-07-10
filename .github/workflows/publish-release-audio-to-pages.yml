@@ -4,63 +4,83 @@ on:
   workflow_dispatch:
     inputs:
       release_tag:
-        description: Release containing the 20 full-quality MP3 files
+        description: Chunk release containing wfchunk-manifest.json and wfchunk__* assets
         required: true
-        default: workout-forge-320-v1
+        default: workout-forge-320-v1-chunks
 
 permissions:
   contents: write
 
 concurrency:
-  group: publish-release-audio
+  group: publish-workout-audio-pages
   cancel-in-progress: false
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
-      - name: Check out main
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          ref: main
           fetch-depth: 1
 
-      - name: Download full-quality MP3 release assets
+      - name: Download staged audio chunks
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ inputs.release_tag }}
         run: |
           set -euo pipefail
-          rm -rf /tmp/workout-audio
-          mkdir -p /tmp/workout-audio
-          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern '*.mp3' --dir /tmp/workout-audio --clobber
-          count=$(find /tmp/workout-audio -maxdepth 1 -type f -name '*.mp3' | wc -l | tr -d ' ')
-          test "$count" -eq 20
+          rm -rf /tmp/workout-chunks /tmp/workout-audio
+          mkdir -p /tmp/workout-chunks /tmp/workout-audio
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern 'wfchunk*' --dir /tmp/workout-chunks --clobber
+          test -f /tmp/workout-chunks/wfchunk-manifest.json
+
+      - name: Reassemble and verify 20 MP3 files
+        run: |
+          set -euo pipefail
           python3 - <<'PY'
+          import hashlib, json
           from pathlib import Path
-          files=sorted(Path('/tmp/workout-audio').glob('*.mp3'))
-          assert len(files)==20
+          root=Path('/tmp/workout-chunks')
+          out=Path('/tmp/workout-audio')
+          manifest=json.loads((root/'wfchunk-manifest.json').read_text())
+          assert manifest['count'] == 20
+          for asset in manifest['assets']:
+              target=out/asset['name']
+              with target.open('wb') as w:
+                  for part in asset['parts']:
+                      p=root/part
+                      if not p.is_file():
+                          raise SystemExit(f'missing {part}')
+                      w.write(p.read_bytes())
+              data=target.read_bytes()
+              assert len(data) == asset['size'], asset['name']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256'], asset['name']
+              print('OK',asset['name'],len(data))
+          files=list(out.glob('*.mp3'))
+          assert len(files) == 20
           assert all(f.stat().st_size > 5_000_000 for f in files)
           print('validated',len(files),'tracks',sum(f.stat().st_size for f in files),'bytes')
           PY
 
-      - name: Replace test encodes with whole audio files
+      - name: Replace test encodes with full-quality whole files
         run: |
           set -euo pipefail
-          rm -f tracks/*.mp3 tracks/*.ogg
+          rm -f tracks/*.mp3 tracks/*.ogg tracks/*.m4a
           cp /tmp/workout-audio/*.mp3 tracks/
           test "$(find tracks -maxdepth 1 -type f -name '*.mp3' | wc -l | tr -d ' ')" -eq 20
 
-      - name: Commit and push audio files
+      - name: Commit and push permanent Pages assets
         run: |
           set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add -A tracks
+          git config http.version HTTP/1.1
+          git config http.postBuffer 524288000
+          git add tracks/*.mp3
           if git diff --cached --quiet; then
-            echo 'Audio files already current'
+            echo 'Full-quality audio already published.'
             exit 0
           fi
-          git commit -m 'Publish 20 full-quality 320kbps MP3 tracks'
-          git -c http.postBuffer=524288000 push origin HEAD:main
+          git commit -m 'Publish full-quality 320 kbps MP3 tracks'
+          git push origin HEAD:main
