@@ -1,9 +1,10 @@
 # Workout Forge Music CDN
 
-Public GitHub Pages audio CDN for app testing.
+Permanent GitHub Pages audio CDN for the RepForge app.
 
+- Base URL: https://bobhasaclaw.github.io/workout-forge-music-cdn/
 - Catalog: https://bobhasaclaw.github.io/workout-forge-music-cdn/catalog.json
-- Player/index: https://bobhasaclaw.github.io/workout-forge-music-cdn/
+- Manifest fallback: https://bobhasaclaw.github.io/workout-forge-music-cdn/manifest.json
 - First track: https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/01-break-the-floor.mp3
 
-MP3s are 8 kbps mono test encodes for quick app/CDN testing. Source masters are local.
+The catalog contains 20 whole-file MP3 tracks encoded at 320 kbps, 44.1 kHz stereo. Track URLs are stable and GitHub Pages supports byte-range requests for seeking.

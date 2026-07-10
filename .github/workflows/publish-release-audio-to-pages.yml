@@ -1,0 +1,66 @@
+name: Publish release audio to GitHub Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release containing the 20 full-quality MP3 files
+        required: true
+        default: workout-forge-320-v1
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-release-audio
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Download full-quality MP3 release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.release_tag }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/workout-audio
+          mkdir -p /tmp/workout-audio
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern '*.mp3' --dir /tmp/workout-audio --clobber
+          count=$(find /tmp/workout-audio -maxdepth 1 -type f -name '*.mp3' | wc -l | tr -d ' ')
+          test "$count" -eq 20
+          python3 - <<'PY'
+          from pathlib import Path
+          files=sorted(Path('/tmp/workout-audio').glob('*.mp3'))
+          assert len(files)==20
+          assert all(f.stat().st_size > 5_000_000 for f in files)
+          print('validated',len(files),'tracks',sum(f.stat().st_size for f in files),'bytes')
+          PY
+
+      - name: Replace test encodes with whole audio files
+        run: |
+          set -euo pipefail
+          rm -f tracks/*.mp3 tracks/*.ogg
+          cp /tmp/workout-audio/*.mp3 tracks/
+          test "$(find tracks -maxdepth 1 -type f -name '*.mp3' | wc -l | tr -d ' ')" -eq 20
+
+      - name: Commit and push audio files
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A tracks
+          if git diff --cached --quiet; then
+            echo 'Audio files already current'
+            exit 0
+          fi
+          git commit -m 'Publish 20 full-quality 320kbps MP3 tracks'
+          git -c http.postBuffer=524288000 push origin HEAD:main
