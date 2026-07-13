@@ -1,7 +1,7 @@
 {
-  "version": "1.1",
-  "name": "Workout Forge — Hard Rock Metal Workout Vol. 1",
-  "description": "20 full-length, high-quality workout tracks served as whole progressive MP3 files.",
+  "version": "2.0",
+  "name": "Workout Forge Music Catalogue",
+  "description": "40 full-length workout tracks across hard rock/metal and techno/electronic albums, served as progressive MP3 files.",
   "tracks": [
     {
       "id": "workout-forge-01",
@@ -9,7 +9,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "hard rock",
-      "mood": ["workout", "high-energy", "warm-up", "driving"],
+      "mood": [
+        "workout",
+        "high-energy",
+        "warm-up",
+        "driving"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/01-break-the-floor.mp3",
       "duration_seconds": 200
     },
@@ -19,7 +24,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "industrial metal",
-      "mood": ["workout", "strength", "focused", "heavy"],
+      "mood": [
+        "workout",
+        "strength",
+        "focused",
+        "heavy"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/02-iron-pulse.mp3",
       "duration_seconds": 247
     },
@@ -29,7 +39,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "nu metal",
-      "mood": ["workout", "aggressive", "HIIT", "high-energy"],
+      "mood": [
+        "workout",
+        "aggressive",
+        "HIIT",
+        "high-energy"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/03-no-mercy-mode.mp3",
       "duration_seconds": 221
     },
@@ -39,7 +54,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "alternative metal",
-      "mood": ["workout", "cardio", "endurance", "intense"],
+      "mood": [
+        "workout",
+        "cardio",
+        "endurance",
+        "intense"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/04-furnace-lungs.mp3",
       "duration_seconds": 200
     },
@@ -49,7 +69,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "groove metal",
-      "mood": ["workout", "strength", "heavy", "powerlifting"],
+      "mood": [
+        "workout",
+        "strength",
+        "heavy",
+        "powerlifting"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/05-barbell-thunder.mp3",
       "duration_seconds": 168
     },
@@ -59,7 +84,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "hard rock",
-      "mood": ["workout", "high-energy", "adrenaline", "driving"],
+      "mood": [
+        "workout",
+        "high-energy",
+        "adrenaline",
+        "driving"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/06-blood-hot-signal.mp3",
       "duration_seconds": 217
     },
@@ -69,7 +99,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "rap metal",
-      "mood": ["workout", "HIIT", "countdown", "aggressive"],
+      "mood": [
+        "workout",
+        "HIIT",
+        "countdown",
+        "aggressive"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/07-set-fire-to-the-timer.mp3",
       "duration_seconds": 204
     },
@@ -79,7 +114,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "southern metal",
-      "mood": ["workout", "gritty", "strength", "driving"],
+      "mood": [
+        "workout",
+        "gritty",
+        "strength",
+        "driving"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/08-gravel-in-the-veins.mp3",
       "duration_seconds": 203
     },
@@ -89,7 +129,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "nu metal",
-      "mood": ["workout", "heavy", "aggressive", "focused"],
+      "mood": [
+        "workout",
+        "heavy",
+        "aggressive",
+        "focused"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/09-teeth-on-the-chain.mp3",
       "duration_seconds": 197
     },
@@ -99,7 +144,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "hard rock",
-      "mood": ["workout", "final-push", "high-energy", "PR"],
+      "mood": [
+        "workout",
+        "final-push",
+        "high-energy",
+        "PR"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/10-last-rep-riot.mp3",
       "duration_seconds": 219
     },
@@ -109,7 +159,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "industrial metal",
-      "mood": ["workout", "cardio", "HIIT", "relentless"],
+      "mood": [
+        "workout",
+        "cardio",
+        "HIIT",
+        "relentless"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/11-caged-animal-cardio.mp3",
       "duration_seconds": 200
     },
@@ -119,7 +174,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "groove metal",
-      "mood": ["workout", "strength", "focused", "motivational"],
+      "mood": [
+        "workout",
+        "strength",
+        "focused",
+        "motivational"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/12-hammer-the-doubt.mp3",
       "duration_seconds": 191
     },
@@ -129,7 +189,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "alternative metal",
-      "mood": ["workout", "focused", "dark", "heavy"],
+      "mood": [
+        "workout",
+        "focused",
+        "dark",
+        "heavy"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/13-metal-in-the-mirror.mp3",
       "duration_seconds": 229
     },
@@ -139,7 +204,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "electronic rock",
-      "mood": ["workout", "cardio", "high-energy", "electric"],
+      "mood": [
+        "workout",
+        "cardio",
+        "high-energy",
+        "electric"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/14-sweat-like-voltage.mp3",
       "duration_seconds": 209
     },
@@ -149,7 +219,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "hard rock",
-      "mood": ["workout", "strength", "powerlifting", "triumphant"],
+      "mood": [
+        "workout",
+        "strength",
+        "powerlifting",
+        "triumphant"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/15-deadlift-sunrise.mp3",
       "duration_seconds": 214
     },
@@ -159,7 +234,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "groove metal",
-      "mood": ["workout", "strength", "relentless", "heavy"],
+      "mood": [
+        "workout",
+        "strength",
+        "relentless",
+        "heavy"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/16-push-until-it-moves.mp3",
       "duration_seconds": 207
     },
@@ -169,7 +249,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "industrial metal",
-      "mood": ["workout", "HIIT", "countdown", "intense"],
+      "mood": [
+        "workout",
+        "HIIT",
+        "countdown",
+        "intense"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/17-the-beast-counts-down.mp3",
       "duration_seconds": 191
     },
@@ -179,7 +264,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "alternative metal",
-      "mood": ["workout", "heavy", "focused", "anthemic"],
+      "mood": [
+        "workout",
+        "heavy",
+        "focused",
+        "anthemic"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/18-concrete-halo.mp3",
       "duration_seconds": 216
     },
@@ -189,7 +279,12 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "rap rock",
-      "mood": ["workout", "driving", "aggressive", "high-energy"],
+      "mood": [
+        "workout",
+        "driving",
+        "aggressive",
+        "high-energy"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/19-rage-with-a-steering-wheel.mp3",
       "duration_seconds": 210
     },
@@ -199,9 +294,356 @@
       "artist": "Workout Forge",
       "album": "Hard Rock Metal Workout Vol. 1",
       "genre": "hard rock",
-      "mood": ["workout", "final-push", "endurance", "triumphant"],
+      "mood": [
+        "workout",
+        "final-push",
+        "endurance",
+        "triumphant"
+      ],
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/tracks/20-empty-the-tank.mp3",
       "duration_seconds": 173
+    },
+    {
+      "id": "workout-forge-techno-01",
+      "title": "Cold Start",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "driving techno",
+      "bpm": 132,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "warm-up",
+        "progressive"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/01-cold-start.mp3",
+      "duration_seconds": 211
+    },
+    {
+      "id": "workout-forge-techno-02",
+      "title": "Arc Runner",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "peak-time techno",
+      "bpm": 136,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "cardio",
+        "driving"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/02-arc-runner.mp3",
+      "duration_seconds": 247
+    },
+    {
+      "id": "workout-forge-techno-03",
+      "title": "Torque Bloom",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "melodic techno",
+      "bpm": 134,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "strength",
+        "focused"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/03-torque-bloom.mp3",
+      "duration_seconds": 206
+    },
+    {
+      "id": "workout-forge-techno-04",
+      "title": "Neon Lactic",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "hard techno",
+      "bpm": 138,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "HIIT",
+        "intervals"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/04-neon-lactic.mp3",
+      "duration_seconds": 205
+    },
+    {
+      "id": "workout-forge-techno-05",
+      "title": "Twelve Floors Up",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "progressive techno",
+      "bpm": 135,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/05-twelve-floors-up.mp3",
+      "duration_seconds": 257
+    },
+    {
+      "id": "workout-forge-techno-06",
+      "title": "Chrome Breath",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "hypnotic techno",
+      "bpm": 130,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "strength",
+        "focused"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/06-chrome-breath.mp3",
+      "duration_seconds": 247
+    },
+    {
+      "id": "workout-forge-techno-07",
+      "title": "Pulse Divide",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "tech trance",
+      "bpm": 140,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "HIIT",
+        "intervals"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/07-pulse-divide.mp3",
+      "duration_seconds": 174
+    },
+    {
+      "id": "workout-forge-techno-08",
+      "title": "Redline Geometry",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "industrial techno",
+      "bpm": 137,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/08-redline-geometry.mp3",
+      "duration_seconds": 270
+    },
+    {
+      "id": "workout-forge-techno-09",
+      "title": "Ghost in the Treadmill",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "dark techno",
+      "bpm": 133,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "cardio",
+        "driving"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/09-ghost-in-the-treadmill.mp3",
+      "duration_seconds": 294
+    },
+    {
+      "id": "workout-forge-techno-10",
+      "title": "Kilowatt Veins",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "electro techno",
+      "bpm": 139,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/10-kilowatt-veins.mp3",
+      "duration_seconds": 315
+    },
+    {
+      "id": "workout-forge-techno-11",
+      "title": "No Idle State",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "hardgroove techno",
+      "bpm": 142,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/11-no-idle-state.mp3",
+      "duration_seconds": 225
+    },
+    {
+      "id": "workout-forge-techno-12",
+      "title": "Pressure Language",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "warehouse techno",
+      "bpm": 134,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "strength",
+        "focused"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/12-pressure-language.mp3",
+      "duration_seconds": 257
+    },
+    {
+      "id": "workout-forge-techno-13",
+      "title": "Black Glass Sprint",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "rave techno",
+      "bpm": 144,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/13-black-glass-sprint.mp3",
+      "duration_seconds": 162
+    },
+    {
+      "id": "workout-forge-techno-14",
+      "title": "Muscle Memory Machine",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "minimal techno",
+      "bpm": 136,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/14-muscle-memory-machine.mp3",
+      "duration_seconds": 173
+    },
+    {
+      "id": "workout-forge-techno-15",
+      "title": "Threshold City",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "driving melodic techno",
+      "bpm": 140,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/15-threshold-city.mp3",
+      "duration_seconds": 240
+    },
+    {
+      "id": "workout-forge-techno-16",
+      "title": "Gravity Has Teeth",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "dark industrial techno",
+      "bpm": 132,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "strength",
+        "focused"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/16-gravity-has-teeth.mp3",
+      "duration_seconds": 331
+    },
+    {
+      "id": "workout-forge-techno-17",
+      "title": "Overclock the Body",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "hard techno",
+      "bpm": 145,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy",
+        "HIIT",
+        "intervals",
+        "final-push",
+        "relentless"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/17-overclock-the-body.mp3",
+      "duration_seconds": 260
+    },
+    {
+      "id": "workout-forge-techno-18",
+      "title": "Last Light Faster",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "uplifting techno",
+      "bpm": 138,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/18-last-light-faster.mp3",
+      "duration_seconds": 208
+    },
+    {
+      "id": "workout-forge-techno-19",
+      "title": "The Meter Breaks",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "peak-time techno",
+      "bpm": 142,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/19-the-meter-breaks.mp3",
+      "duration_seconds": 215
+    },
+    {
+      "id": "workout-forge-techno-20",
+      "title": "Afterburn Silence",
+      "artist": "Workout Forge",
+      "album": "Neon Overdrive — Techno Workout Vol. 2",
+      "genre": "cinematic techno",
+      "bpm": 132,
+      "mood": [
+        "workout",
+        "electronic",
+        "high-energy"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/20-afterburn-silence.mp3",
+      "duration_seconds": 158
     }
   ]
 }
