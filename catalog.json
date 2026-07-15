@@ -644,6 +644,366 @@
       "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/artwork/cover.jpg",
       "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/neon-overdrive/tracks/20-afterburn-silence.mp3",
       "duration_seconds": 158
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-01",
+      "title": "Clock Starts Before I Do",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 92,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/01-clock-starts-before-i-do.mp3",
+      "duration_seconds": 188.453
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-02",
+      "title": "First Plate Lies",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 96,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/02-first-plate-lies.mp3",
+      "duration_seconds": 148.898
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-03",
+      "title": "Count It Clean",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 100,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/03-count-it-clean.mp3",
+      "duration_seconds": 156.7
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-04",
+      "title": "Borrowed Anger",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 94,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/04-borrowed-anger.mp3",
+      "duration_seconds": 180.837
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-05",
+      "title": "Missed Rep, Same Room",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 88,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/05-missed-rep-same-room.mp3",
+      "duration_seconds": 160.067
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-06",
+      "title": "No Camera On",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 102,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/06-no-camera-on.mp3",
+      "duration_seconds": 181.719
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-07",
+      "title": "Breath Owes Nobody",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 90,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/07-breath-owes-nobody.mp3",
+      "duration_seconds": 152.985
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-08",
+      "title": "Spotter’s Hands",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 98,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/08-spotters-hands.mp3",
+      "duration_seconds": 156.421
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-09",
+      "title": "Quiet Between Sets",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 86,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/09-quiet-between-sets.mp3",
+      "duration_seconds": 159.707
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-10",
+      "title": "Last Good Form",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 104,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/10-last-good-form.mp3",
+      "duration_seconds": 151.696
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-11",
+      "title": "The Number Moves",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 106,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/11-the-number-moves.mp3",
+      "duration_seconds": 154.935
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-12",
+      "title": "Second Wind Is Expensive",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 100,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/12-second-wind-is-expensive.mp3",
+      "duration_seconds": 154.9
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-13",
+      "title": "Rope Burn Rhythm",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 110,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/13-rope-burn-rhythm.mp3",
+      "duration_seconds": 153.623
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-14",
+      "title": "Six Inches Left",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 108,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/14-six-inches-left.mp3",
+      "duration_seconds": 165.314
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-15",
+      "title": "Rest Timer Red",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 96,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/15-rest-timer-red.mp3",
+      "duration_seconds": 146.936
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-16",
+      "title": "Legs on the Stairs",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 103,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/16-legs-on-the-stairs.mp3",
+      "duration_seconds": 150.221
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-17",
+      "title": "Water, Then Work",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 92,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/17-water-then-work.mp3",
+      "duration_seconds": 176.681
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-18",
+      "title": "One More Round Done Right",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 106,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/18-one-more-round-done-right.mp3",
+      "duration_seconds": 164.107
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-19",
+      "title": "Cooldown Truth",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 88,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/19-cooldown-truth.mp3",
+      "duration_seconds": 154.622
+    },
+    {
+      "id": "vanta-pace-no-witness-but-the-clock-20",
+      "title": "Walk Home Heavy",
+      "artist": "Vanta Pace",
+      "album": "No Witness but the Clock",
+      "genre": "hard workout rap",
+      "bpm": 84,
+      "mood": [
+        "workout",
+        "rap",
+        "strength",
+        "focused",
+        "disciplined"
+      ],
+      "cover_url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/artwork/cover.jpg",
+      "url": "https://bobhasaclaw.github.io/workout-forge-music-cdn/albums/no-witness-but-the-clock/tracks/20-walk-home-heavy.mp3",
+      "duration_seconds": 167.068
     }
   ]
 }
